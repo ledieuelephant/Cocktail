@@ -10,7 +10,7 @@ fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s="+cocktailname)
     json.drinks.map(drink => {
         // creation de la card
         var card = document.createElement("a")
-        card.href = "/cocktail.html?id=" + drink.idDrink
+        card.href = "./cocktail.html?id=" + drink.idDrink
         card.className = "cocktail-card"
         // creation de l'image
         var image = document.createElement("img")
@@ -58,5 +58,5 @@ fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s="+cocktailname)
 document.getElementById("cocktail-find").onclick = function(){
     var name = document.getElementById("cocktail-name").value
     console.log(name)
-    document.location.href = "/search.html?name="+name
+    document.location.href = "./search.html?name="+name
 }
